@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  # 1. Nginx - веб-сервер (reverse proxy)
+
   nginx:
     image: nginx:alpine
     container_name: my_nginx
@@ -15,7 +15,7 @@ services:
       - mynet
     restart: unless-stopped
 
-  # 2. Node.js приложение (backend)
+
   app:
     image: node:20-alpine
     container_name: my_app
@@ -34,7 +34,7 @@ services:
       - mynet
     restart: unless-stopped
 
-  # 3. PostgreSQL - база данных
+
   postgres:
     image: postgres:16-alpine
     container_name: my_postgres
@@ -48,7 +48,7 @@ services:
       - mynet
     restart: unless-stopped
 
-  # 4. Redis - кэш / брокер
+
   redis:
     image: redis:7-alpine
     container_name: my_redis
